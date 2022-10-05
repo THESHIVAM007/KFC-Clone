@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .headdiv{
+        font-family: "";
+      }
+        .maindiv{
+            width: 100%;
+             
+        }
+      .navbar {
+        width: 100%;
+        height: 100px;
+        font-family: "National 2 Condensed";
+        margin: auto;
+        display: flex;
+      }
+      .left {
+        width: 30%;
+        height: 100%;
+        font-size: 20px;
+        display: flex;
+        padding: 30px;
+        justify-content: space-around;
+        cursor: pointer;
+      }
+      .right {
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        padding: 2%;
+        font-size: 25px;
+        margin-left: 600px;
+      }
+      .cartIcon {
+    width: 51.2px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.headerBottom {
+    display: flex;
+    background: #202124;
+    height: 68px;
+    width: 100%;
+    margin: .5% auto;
+}
+.headBottomTxt {
+    font-family: "National 2 Condensed";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: auto 15px auto auto;
+}     
+ .start-order-btn {
+    
+    font-family: "National 2 Regular";
+    line-height: 10px;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: 500;
+    background-color: red;
+    border-radius: 15px;
+    margin-right: 500px;
+    height: 30px;
+    color: white;
+    width: 100px;
+    cursor: pointer;
+}
+
+.deals-image-text {
+    font-family: "National 2 Condensed";
+    color: white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 74px;
+    line-height: 78px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.deals-stripe-icon {
+    margin-left: 170px;
+}
+.header-text {
+    margin: auto 0;
+    font-family: "National 2 Condensed";
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 43px;
+    letter-spacing: 1px;
+    margin-left: 150px;
+}
+.cards{
+ 
+  width: 80%;
+  margin: auto;
+ 
+  margin-top: 20px;
+  height: 870px;
+ 
+ /* display: grid;
+ grid-template-columns: auto auto auto;
+  grid-template-rows: 420px 420px; */
+}
+.selectkfc{
+  background-image :url("https://online.kfc.co.in/static/media/Native_select%20a%20kfc_grey%20image.6e97ff02.svg");
+  width: 330px;
+  height: 420px;
+  /* object-fit: none; */
+  
+  border-radius: 10px;
+  /* margin: auto; */
+}
+.offer-store-text {
+    font-family: "National 2 Condensed";
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 20px;
+    line-height: 43px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    top: 40%;
+    width: 90%;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 20px;
+    
+}
+button.store-btn {
+    padding: 11px 45px;
+    border-radius: 200px;
+    height: 44px;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    outline: none;
+    margin: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    background-color: transparent;
+    
+    color: #fff;
+    
+}
+button.store-btn:hover
+{
+background-image:none;
+background-color: white;
+ color: black;
+}
+.hotncrispy{
+  width: 330px;
+  height: 420px;
+  /* object-fit: none; */
+  
+  border-radius: 10px; 
+  
+  margin: auto;
+}
+.offers-menu-product-image {
+    width: 100%;
+    height: 234px;
+    margin-bottom: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.offers-deals-product-title {
+    margin-bottom: 5px;
+    font-style: normal;
+    color: #e4002b;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 30px;
+    font-family: "National 2 Condensed";
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    /* display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; */
+    margin-top: 2px;
+    padding: 0px 15px 2px;
+}
+.offers-deals-product-desc {
+    font-style: normal;
+    font-weight: 600;
+    font-family: "National 2 Regular";
+    height: 48px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -.1px;
+    color: #202124;
+    overflow: hidden;
+    text-align: center;
+    /* text-overflow: ellipsis; */
+    /* display: -webkit-box; */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    padding: 0px 15px 2px;
+    margin-top: 2px;
+    margin-bottom: 1px;
+}
+  .hotncrispydiv{
+    display: flex;
+
+  }
+.view-details-btn {
+    border: none;
+    background: none;
+    outline: none;
+    font-family: "National2-Medium";
+    text-decoration: underline;
+    padding: 1px 10px 1px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #494949;
+    margin: auto 0 auto auto;
+    border-radius: 3px;
+    cursor: pointer;
+    
+}
+.redeem-btn {
+    padding: 11px;
+    width: 42.5%;
+    border-radius: 200px;
+    height: 44px;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    outline: none;
+    margin: auto 7% 5px auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "National2-Medium";
+    display: flex;
+    background-color: transparent;
+    
+    color: #202124;
+    text-align: center;
+    padding-left: 45px;
+}
+button.redeem-btn:hover
+{
+background-image:none;
+background-color: black;
+ color: white;
+}
+.hundredoff{
+  width: 330px;
+  height: 420px;
+  /* object-fit: none; */
+  
+  border-radius: 10px; 
+  /* margin: auto; */
+}
+.firstrow{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.secondrow{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  
+}
+.vegzinger{
+  width: 330px;
+  height: 420px;
+  
+  border-radius: 10px; 
+  
+  margin-left: 85px;
+}
+.footer{
+  
+  height: 250px;
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  background-color: #202124;
+}
+.kfc-footer-logo{
+   margin-top: 50px;
+   margin-left: 50px;
+}
+.ul-title{
+   margin-top: 50px;
+   margin-left: 50px;
+   color: white;
+   
+}
+.findstore{
+  margin-top:50px;
+  margin-left: 10px;
+  
+}
+.image{
+  margin-top:50px;
+  margin-left: 70px;
+}
+.menucolor>a{
+  color: black;
+  text-decoration: none;
+}
+
+
+    </style>
+  </head>
+  <body>
+   <div class="maindiv">
+    <div class="navbar">
+      <div class="left">
+          <div><img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt=""> </div>
+          <div class="menucolor"> <a href="kfc.html">Menu</a> </div>
+          <div>Deals</div>  
+    </div>
+      
+      <div class="right">
+        <div><img src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg" alt=""></div>
+        <div>Account</div>
+        <div class="cartIcon"><img src="//images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg" alt=""></div>
+    </div>
+   </div>
+  <div class="headerBottom">
+    <div class="headBottomTxt">LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN</div>
+    <button class="start-order-btn"><span>Start Order</span></button>
+  </div>
+  <div class="deals-header-image">
+    <img src="https://online.kfc.co.in/static/media/offer_deals_banner.777f20e1.svg" alt="" style="width: 100%;">
+  <div class="deals-image-text">Deals &amp; Offers</div>
+  <img class="deals-stripe-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAeCAYAAAB5c901AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABNSURBVHgB7c9BDQAgAMPAgQ4c4F8KDvABFuBHSe+9LGmZ6SsXWkY52b3yW/M5A+kMpDOQzkA6A+kMpDOQzkA6A+kMpDOQzkA6A+kMpNu9MQhKmC+cDgAAAABJRU5ErkJggg==" alt="">
+</div>
+<div class="deals-header-text-container">
+  <h2 class="header-text" >OFFERS FOR YOU</h2>
+</div>
+<div class="cards">
+  <div class="firstrow">
+  <div class="selectkfc">
+    <h3 class="offer-store-text">Select a kfc to see local offers</h3>
+    <button class="store-btn"  aria-label="Find a KFC">Find a KFC</button>
+  </div>
+  <div class="hotncrispy">
+    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/ADDCHK99.jpg" alt="No-Image" data-testid="offers-deals-card-image" class="offers-menu-product-image">
+    <h4 class="offers-deals-product-title">Add 2 Pc  Hot n Crisp... </h4>
+    <h5 class="offers-deals-product-desc">Add 2 Pc  Hot n Crispy Chicken @ just Rs 99 on min cart value of Rs 499 or more. Applicable on 2nd &amp; 3rd order for signed in user.</h5>
+    <div class="hotncrispydiv">
+      <button class="view-details-btn" >View Details</button>
+      <button class="redeem-btn" >Redeem</button>
+    </div>
+  </div>
+  <div class="hundredoff">
+    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/BIGSAVE.jpg" alt="No-Image" data-testid="offers-deals-card-image" class="offers-menu-product-image">
+    <h4 class="offers-deals-product-title">Upto Rs 100 off on m... </h4>
+    <h5 class="offers-deals-product-desc">Upto Rs 100 off on min cart value of Rs 599 or more . Applicable on 4th order onwards for</h5>
+    <div class="hotncrispydiv">
+      <button class="view-details-btn" >View Details</button>
+      <button class="redeem-btn" onclick="myFunction()" >Redeem</button>
+    </div>
+    </div>
+    <div class="secondrow">
+      <div class="hotncrispy">
+        <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/CHKZINGER.jpg" class="offers-menu-product-image">
+        <h4 class="offers-deals-product-title">1 Pc free Chicken... </h4>
+        <h5 class="offers-deals-product-desc">1 Pc free Chicken Zinger on a cart value of 399 or above on first order. Only for registered users.</h5>
+        <div class="hotncrispydiv">
+          <button class="view-details-btn">View Details</button>
+          <button class="redeem-btn" >Redeem</button>
+        </div>
+      </div>
+      
+        <div class="vegzinger">
+          <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/VEGZINGER.jpg" class="offers-menu-product-image">
+          <h4 class="offers-deals-product-title">1 Pc free Veg Zinger... </h4>
+          <h5 class="offers-deals-product-desc">1 Pc free Veg Zinger on a cart value of 399 or above on first order. Only for registered users.</h5>
+          <div class="hotncrispydiv">
+            <button class="view-details-btn" role="button" aria-label="Close" data-testid="details-button">View Details</button>
+            <button class="redeem-btn" role="button" aria-label="Close" data-testid="redeem-button">Redeem</button>
+          </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+  <div  class="kfc-footer-logo">
+  <img src="//images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg" alt="KFC LOGO">
+</div>
+
+  <div class="ul-title"><span role="heading" aria-level="2" class="header-text-footer">KFC Food</span>
+    <ul >
+      <li><a >Menu</a></li>
+      <li><a>Order Lookup</a></li>
+      <li><a>Gift Card</a></li>
+    </ul>
+  </div>
+  <div class="ul-title"><span role="heading" aria-level="2" class="header-text-footer">Support</span>
+    <ul>
+      <li><a>Get Help</a></li>
+      <li><a>Contact Us</a></li>
+      <li><a>KFC Feedback</a></li>
+    </ul>
+  </div>
+  <div class="ul-title"><span role="heading" aria-level="2" class="header-text-footer">Legal</span>
+    <ul >
+      <li><a>Terms and Conditions</a></li>
+      <li><a>Privacy Policy</a></li>
+      <li><a>Disclaimer</a></li>
+      <li><a>Caution Notice</a></li>
+    </ul>
+  </div>
+  <div class="ul-title">KFC India</span>
+    <ul>
+      <li><a >About KFC</a></li>
+      <li><a  >KFC Care</a></li>
+      <li><a  >Careers</a></li>
+      <li><a >Our Golden Past</a></li>
+    </ul>
+  </div>
+  <div class="findstore"><img src="//images.ctfassets.net/wtodlh47qxpt/6qgKpWUOIsrIiazhk3cdmF/d60b4c20be69bab1f939bf33348b67e9/Find_KFC.svg" alt=""><a class="link" target="_blank" tabindex="0" href="https://restaurants.kfc.co.in/">Find a KFC</a></div>
+  <div class="flex social-btns" ><a 
+    href="https://play.google.com/store/apps/details?id=com.yum.kfc"><img src="//images.ctfassets.net/wtodlh47qxpt/6BdZsyjLn64c06uCIE73d1/fb530f5d5231533b049463f6c7e8a2b1/google_play.svg" alt="Google Play" class="image"></a><a class="link" target="_blank" href="https://apps.apple.com/in/app/kfc-india/id915824379"><img src="//images.ctfassets.net/wtodlh47qxpt/em3mcMuAdXWlgucSJiTbS/d3ae7e51ed101d829e459355e255c47f/apple.svg" alt="Apple Store"></a></div>
+</div>
+<script>
+  function myFunction() {
+  alert("Congratulations, use code : 100OFF to get Rs.100 discount");
+}
+</script>
+  </body>
+</html>

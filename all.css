@@ -1,0 +1,358 @@
+.Cont {
+	margin: 5vw 33vw;
+	/* margin: auto; */
+}
+
+.ContOtp {
+	margin: 8vw 33vw;
+}
+
+
+.title {
+	text-align: center;
+	font-family: 'National2CondensedWeb-Medium';
+	font-style: normal;
+	font-weight: bolder;
+	font-size: 24px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: #202124;
+	margin-bottom: 7%;
+}
+.subTitle {
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+	font-size: 14px;
+	text-align: center;
+	font-family: 'National 2 Regular';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: -0.1px;
+	color: #494949;
+}
+
+.otpSubtitle {
+	margin: 3% auto 0%;
+}
+
+.phoneNumber , .firstName , .emailAddress{
+	border: none;
+	text-align: left;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #202124;
+	outline: none;
+	font-family: 'National 2 Regular';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: -0.1px;
+	color: #202124;
+	padding-bottom: 0.7%;
+	position: relative;
+}
+.firstName{
+	margin: 8% 0;
+}
+.btnDiv {
+	text-align: center;
+	margin-top: 7%;
+	margin-bottom: 5%;
+}
+
+.phoneLabelContainer{
+	position: relative;
+}
+
+
+.btnSendCode {
+	height: 44px;
+	padding: 10px 40px;
+	color: #ffffff;
+	font-size: 13px;
+	background-color: #202124;
+	border: none;
+	outline: none;
+	border-radius: 200px;
+	cursor: pointer;
+    /* width: 60%; */
+}
+
+.termsnconditionsDiv {
+	margin-top: 5%;
+}
+
+.termsnconditions {
+	font-family: 'National 2 Regular';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 20px;
+	color: black;
+}
+
+.resendCode {
+	color: #494949;
+	font-family: 'National2-Medium';
+	color: #494949;
+	background: none;
+    border: none;
+    text-decoration: underline;
+	cursor:pointer;
+	outline: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: -0.1px;
+}
+
+
+.signInWith {
+	display: none;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.signInWithTitle {
+	font-family: 'National2CondensedWeb-Medium';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #202124;
+	width: 250px;
+	margin-left: 5%;
+}
+
+.signInWithLine {
+	width: 100%;
+	height: 1px;
+	background-color: #202124;
+	opacity: 0.1;
+	margin-top: 10px;
+}
+
+.widget {
+	display: none;
+	height: 65px;
+	margin-top: 2%;
+	font-size: 20px;
+	letter-spacing: -1px;
+	border-radius: 10px;
+}
+
+
+
+.loginBtn img {
+	padding: 12px 22px;
+}
+
+.joinNow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 3%
+}
+.different-number {
+	font-family: 'National2-Medium';
+	color: #494949;
+	background: none;
+    border: none;
+    text-decoration: underline;
+	cursor:pointer;
+	outline: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: -0.1px;
+}
+
+#phoneLabel {
+	visibility: hidden;
+}
+
+.phoneLabel {
+	font-family: 'National 2 Regular';
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 22px;
+color: #494949;
+
+}
+
+.otpDiv {
+	text-align: center;
+	display: flex;
+	margin: 0 auto;
+	width: 50%;
+	margin: 1% auto 4%;
+}
+
+.otpNum {
+	width: 20%;
+	margin: 0 auto;
+	border: none;
+	border-bottom: 2px solid #494949;
+	outline: none;
+	text-align: center;
+	font-family: 'National2CondensedWeb-Medium';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+    line-height: 44px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #202124;
+}
+
+.submitBtnDiv {
+	text-align: center;
+	margin-top: 7%;
+}
+
+.btnSubmit {
+	padding: 10px 40px;
+	background-color: black;
+	color: white;
+	border-radius: 200px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+
+
+.sign_in_header{
+	text-align: center;
+    margin: auto;
+    display: block;
+	color: #494949;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: 'National2-Medium';
+	margin-bottom: 7%;
+}
+
+.kfcImg {
+	text-align: center;
+	margin: 8% auto;
+	display: block;
+	cursor: pointer;
+}
+.orDiv{
+	display: flex;
+	margin: 5% 0;
+}
+.orLeft , .orRight{
+	width: 100%;
+	border-top: 1px solid #000000;
+	margin-top: 10px;
+	opacity: 0.1;
+}
+.orCenter{
+	margin: 0 4%;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	color: #202124;
+	font-family: 'National 2 Regular';
+}
+.skipBtnDiv{
+	margin-top: 3%;
+	text-align: center;
+}
+.skipBtn{
+	width: 100%;
+	background: #ffffff;
+	color:#202124;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 30px;
+	align-items: center;
+	text-align: center;
+	outline: none;
+	border-radius: 66px;
+	border: 1px solid #202124;
+	font-family: 'National 2 Regular';
+	padding: 8px 40px;
+	cursor: pointer;
+	}
+	.orSkipDiv{
+		width: 34vw;
+	}
+
+
+
+@media screen and (max-width: 1024px) {
+	.Root {
+		margin: 2vw 10vw;
+	}
+	.kfcImg{
+		margin: 17% auto 15%;
+	}
+	.title{
+		font-size:20px;
+		line-height: 22px;
+		margin-bottom: 13%;
+		margin-top: 8%;
+	}
+	.title.addOn{
+		margin-bottom: 7%;
+		margin-top: 8%;
+	}
+	.orSkipDiv{
+		width: 80vw;
+	}
+	.btnDiv{
+		margin: 9% 0;
+	}
+	.rootOtp {
+		margin: 2% 5% 5%;
+	}
+	.submitBtnDiv {
+		margin-top: 8%;
+	}
+	
+
+	.signInWithTitle {
+		width: 250px;
+	}
+	.signInWithLine {
+		width: 100%;
+		margin-top: 10px;
+	}
+}
+
+@media screen and (max-width: 480px) and (min-height :700px) {
+	.orSkipDiv{
+		position: absolute;
+		bottom: 8%;
+	}
+}
+
+
+.termsDiv {
+	margin-top: 20px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.termsText {
+	font-family: 'National 2 Regular';
+	font-size: 14px;
+	margin-left: 10px;
+}

@@ -1,0 +1,416 @@
+* {
+  font-family: sans;
+}
+
+#kfcheader {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  height: 80px;
+}
+.left {
+  width: 25%;
+  height: 60%;
+  display: flex;
+  margin: 5px 0% 0% 5%;
+  justify-content: space-evenly;
+}
+
+.left > a > #kfc {
+  width: 100px;
+  height: 20px;
+  margin-top: 15%;
+}
+
+.left > h6 > a {
+  color: black;
+  text-decoration: none;
+}
+
+.right {
+  width: 29%;
+  height: 100%;
+  display: flex;
+}
+
+img {
+  margin: 7% 0% 0% 14px;
+  width: 17%;
+  height: 20%;
+}
+
+.right > h6 {
+  font-size: 10px;
+  margin: 6% 0% 20% -2%;
+  border-right: 1px solid rgb(212, 212, 212);
+  padding-top: 2%;
+  width: 55px;
+  height: 15px;
+}
+.right > h5 {
+  width: 35px;
+  text-align: end;
+  margin-left: 5px;
+  font-size: 11px;
+  margin-top: 8%;
+}
+
+.right > h5::before {
+  content: "₹";
+  font-weight: 400;
+}
+
+#cover {
+  background-image: url("https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg");
+  background-repeat: no-repeat;
+  margin: 3% 0% 0% 4%;
+  width: 13%;
+  height: 50%;
+}
+.blackBar {
+  width: 98%;
+  height: 40px;
+  background-color: rgb(48, 46, 46);
+}
+
+.blackBar + img {
+  width: 40px;
+  margin-top: 0%;
+  margin-left: 9%;
+}
+
+.blackBar ~ h2 {
+  margin-left: 9%;
+}
+
+#body {
+  display: flex;
+}
+
+#cart {
+  width: 55%;
+  margin-left: 9%;
+}
+
+#cart > .itemBox {
+  display: flex;
+  height: 150px;
+  background: rgb(235, 234, 234);
+  border: 1px solid rgb(163, 38, 38);
+  margin-bottom: 3%;
+}
+
+.itemBox > div:first-child {
+  width: 25%;
+}
+
+.itemBox > div > img {
+  width: 99%;
+  height: 100%;
+  margin: 0%;
+}
+.content {
+  width: 70%;
+  padding: 5% 0% 0% 5%;
+  font-size: 13px;
+}
+.content > div:nth-child(2) {
+  padding-top: 3%;
+}
+
+.content > h4 {
+  margin-top: 30px;
+}
+
+.content > h4::before {
+  content: "₹";
+}
+
+#pricebox {
+  border-radius: 10px;
+  width: 280px;
+  height: 200px;
+  border-top: 1px solid rgb(194, 191, 191);
+  margin-left: 4%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#pricebox > h3 {
+  font-family: "Roboto", sans-serif;
+  padding-left: 4%;
+  font-size: 16px;
+  height: 20px;
+}
+
+#bill {
+  display: grid;
+  margin-top: 10%;
+  grid-template-columns: 73% 23%;
+  grid-template-rows: repeat(3, 25px);
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  color: rgb(0, 0, 0);
+  padding-left: 4%;
+}
+
+#bill > div:nth-child(2n) {
+  text-align: end;
+}
+
+hr {
+  border: none;
+  outline: none;
+  height: 1px;
+  border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+#continue {
+  margin-left: 7%;
+  width: 85%;
+  border-radius: 15px;
+  height: 35px;
+  background-color: rgb(240, 36, 97);
+  border: currentColor;
+  color: rgb(255, 255, 255);
+}
+
+#continue > span {
+  margin-left: 3%;
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  .left {
+    width: 35%;
+    font-size: 25px;
+  }
+  .left > a > #kfc {
+    margin-top: 8%;
+    height: 50%;
+  }
+
+  .left > h6 {
+    font-size: 17px;
+    margin-top: 10%;
+  }
+
+  .right {
+    width: 39%;
+    height: 80%;
+    margin-top: 10px;
+  }
+
+  .right > img {
+    margin: 5% 5% 0% 0%;
+    width: 10%;
+    height: 40%;
+  }
+
+  .right > h6 {
+    font-size: 14px;
+  }
+  .right > h5 {
+    width: 35px;
+    text-align: end;
+    margin-left: 15px;
+    font-size: 16px;
+    margin-top: 8%;
+  }
+
+  #cover {
+    margin: 1% 0% 0% 4%;
+    width: 19%;
+    height: 100%;
+  }
+
+  #body {
+    display: block;
+    margin-left: 9%;
+  }
+
+  #cart {
+    width: 90%;
+    margin-left: 0%;
+  }
+
+  #cart > .itemBox {
+    display: flex;
+    height: 150px;
+    background: rgb(235, 234, 234);
+    margin-bottom: 3%;
+  }
+
+  .itemBox > div > img {
+    width: 99%;
+    height: 100%;
+    margin: 0%;
+  }
+  .content {
+    border: 1px solid black;
+    width: 70%;
+    padding: 5% 0% 0% 5%;
+    font-size: 13px;
+  }
+
+  .content > h4 {
+    margin-top: 30px;
+  }
+
+  .content > h4::before {
+    content: "₹";
+  }
+
+  #pricebox {
+    width: 60%;
+    height: 280px;
+    margin-top: 8%;
+    margin-left: 0%;
+  }
+
+  #pricebox > h3 {
+    padding-left: 4%;
+    font-size: 19px;
+  }
+
+  #bill {
+    display: grid;
+    margin-top: 10%;
+    grid-template-columns: 73% 23%;
+    grid-template-rows: repeat(3, 30px);
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+  }
+
+  #continue {
+    font-size: 20px;
+    margin-top: 8%;
+    width: 85%;
+    border-radius: 15px;
+    height: 35px;
+    background-color: rgb(240, 36, 97);
+    border: currentColor;
+    color: rgb(255, 255, 255);
+  }
+
+  #continue > span {
+    margin-left: 5%;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 376px) {
+  .left {
+    width: 50%;
+    font-size: 25px;
+    margin-left: 0%;
+  }
+  .left > a > #kfc {
+    margin-top: 8%;
+    height: 30%;
+  }
+
+  .left > h6 {
+    font-size: 12px;
+    margin-top: 10%;
+    margin-left: 6%;
+  }
+
+  .right {
+    width: 45%;
+    height: 80%;
+    margin-top: 10px;
+    border: 1px solid red;
+  }
+
+  .right > img {
+    margin: 5% 5% 0% 0%;
+    width: 15%;
+    height: 40%;
+  }
+
+  .right > h6 {
+    font-size: 12px;
+  }
+  .right > h5 {
+    width: 35px;
+    text-align: end;
+    margin-left: 14px;
+    font-size: 13px;
+    margin-top: 8%;
+  }
+
+  #cover {
+    margin: 1% 0% 0% 4%;
+    width: 50%;
+    height: 100%;
+  }
+
+  #body {
+    display: block;
+    margin-left: 9%;
+  }
+
+  #cart {
+    width: 90%;
+    margin-left: 0%;
+  }
+
+  #cart > .itemBox {
+    display: flex;
+    height: 150px;
+    background: rgb(235, 234, 234);
+    margin-bottom: 3%;
+  }
+
+  .itemBox > div > img {
+    width: 99%;
+    height: 100%;
+    margin: 0%;
+  }
+  .content {
+    border: 1px solid black;
+    width: 70%;
+    padding: 5% 0% 0% 5%;
+    font-size: 13px;
+  }
+
+  .content > h4 {
+    margin-top: 30px;
+  }
+
+  .content > h4::before {
+    content: "₹";
+  }
+
+  #pricebox {
+    width: 90%;
+    height: 280px;
+    margin-top: 10%;
+    margin-left: 0%;
+  }
+
+  #pricebox > h3 {
+    padding-left: 4%;
+    font-size: 19px;
+  }
+
+  #bill {
+    margin-top: 10%;
+    grid-template-rows: repeat(3, 30px);
+    font-size: 15px;
+  }
+
+  #continue {
+    font-size: 20px;
+    margin-top: 8%;
+    width: 85%;
+    border-radius: 15px;
+    height: 35px;
+    background-color: rgb(240, 36, 97);
+    border: currentColor;
+    color: rgb(255, 255, 255);
+  }
+
+  #continue > span {
+    margin-left: 5%;
+  }
+}

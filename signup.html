@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="all.css">
+    <title>kfc</title>
+    
+</head>
+<body>
+    <div class="Cont">
+        <div class="loginForm" id="signIn">
+            <div class="sign_in_header">Sign In / Sign up</div>
+            <div class="kfcImg signInScreen"> <img src="https://login.kfc.co.in/auth/resources/1vkce/login/kfcIndiaLoginUIDev_2021_10_27_16_49/images/KFC_logo.svg" alt="kfc logo"></div>
+            <div class="title"><b> Let's Sign In or Create account with your phone number!</b>
+            </div>
+            
+        </div>
+		<form  >
+        <div id="phoneLabel" class="phoneLabel">Phone Number</div>
+        <div class="phoneLabelContainer">
+            <input id="phoneNumberId" class="phoneNumber" name="mobile" type="tel" placeholder="Phone Number*" maxlength="10" required="">
+		 </div>
+        
+       
+        
+        <div class="termsnconditionsDiv">
+            <div class="termsnconditions">By “logging in to KFC”, you agree to our <u><b><a href="https://online.kfc.co.in/privacyPolicy">Privacy Policy</a></b></u> and
+                <u><b> <a href="https://online.kfc.co.in/privacyPolicy">terms & Conditions.</a></b></u></div>
+                
+        </div>
+        <div class="btnDiv">
+            <input type="submit" class="btnSendCode" value="Send Me a Code">
+
+        </div>
+		</form>
+        <div class="signInWith">
+            <div class="signInWithTitle">OR SIGN IN WITH</div>
+            <div class="signInWithLine"></div>
+        </div>
+
+        <div class="widget">
+        </div>
+        <div class="orSkipDiv">
+            <div class="orDiv">
+                <div class="orLeft"></div>
+                <div class="orCenter">or</div>
+                <div class="orRight"></div>
+                <p></p>
+
+            </div>
+            <div class="skipBtnDiv">
+                <button class="skipBtn" id="skipBtn">Skip, Continue As Guest</button>
+    
+            </div>
+        </div>
+        <div>
+        </div>
+
+    </div>
+</body>
+<script>
+  document.querySelector("form").addEventListener("submit", addItem);
+  var mealList =JSON.parse(localStorage.getItem("userList")) || [];
+  function addItem(event) {
+    event.preventDefault();
+    var mobile = document.getElementById("phoneNumberId").value;
+    
+
+    var list = {
+      cus_mobile: mobile,
+    };
+        mealList.push(list);
+        localStorage.setItem("userList", JSON.stringify(mealList));
+
+
+
+
+
+ 
+    // displayItems(mealList);
+     
+  }
+
+//
+ 
+
+
+
+
+
+
+    document.querySelector("#skipBtn").addEventListener("click",function(){
+        window.location.href="index.html"
+    })
+
+
+//     var regUser=JSON.parse(localStorage.getItem("userList"));
+//         document.querySelector("form").addEventListener("submit",signIn);
+//   event.preventDefault();
+  
+//   function signIn()
+//   var mobile = document.getElementById("phoneNumberId").value;
+//     for(var i=0;i<regUser.length;i++){
+//     if(regUser[i].mobile==mobile){
+//         window.location.href="email.html"
+//     }
+// }
+
+
+
+
+    document.querySelector(".btnSendCode").addEventListener("click",function(){
+        window.location.href="otp1.html"
+    })
+
+    
+
+
+// document.querySelector("form").addEventListener("submit",fill_email)
+// window.location.href=email.html
+// function fill_email(event) {
+//     event.preventDefault();
+//     var number = document.querySelector(".phoneNumber").value;
+//     // p.innerHtml=number;
+//     // console.log(number);
+    
+// }
+
+    
+</script>
+</html>

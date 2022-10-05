@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="cart.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC</title>
+</head>
+<body>
+    <div id="kfcheader">
+        <div class = "left">
+            <a href="index.html"> <img id = "kfc" src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt=""></a>
+            <H6> <a href="kfc.html">Menu</a></H6>
+            <H6><a href="deals.html">Deals</a></H6>
+        </div>
+        <div class = "right">
+            <img src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg" alt="">
+            <h6>Account</h6>
+            <h5></h5>
+            <div id = "cover"></div>
+        </div>
+    </div>
+    
+    <div class = "blackBar"></div>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAeCAYAAAB5c901AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABNSURBVHgB7c9BDQAgAMPAgQ4c4F8KDvABFuBHSe+9LGmZ6SsXWkY52b3yW/M5A+kMpDOQzkA6A+kMpDOQzkA6A+kMpDOQzkA6A+kMpNu9MQhKmC+cDgAAAABJRU5ErkJggg==" alt="">
+    <H2>MY CART</H2>
+
+    <div id = "body">
+        <div id = "cart"></div>
+        <div id = "pricebox">
+            <h3> ITEM</h3>
+            <hr>
+            <div id = "bill">
+                <div>Subtotal</div>
+                <div id = "price"></div>
+                <div>GST</div>
+                <div id = "gst"></div>
+                <div>Resturant Handling(Incl.taxes)</div>
+                <div id = "handling">₹35</div>
+            </div>
+            <button id = "continue" onclick = "checkout()">Checkout<span></span></button>
+        </div>
+    </div>
+</body>
+</html>
+<script src=cart.js></script>

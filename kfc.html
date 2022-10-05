@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC</title>
+</head>
+<style>
+
+    .container{
+        width: 100%;
+        height: 770px;
+        display: flex;
+    }
+
+    .option{
+        width: 20%;
+        height: 770px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-left: 80px;
+    }
+
+    .menu{
+        width: 80%;
+        height: 770px;
+        margin-left: 10px;
+        overflow-y: auto;
+        max-height: 770px;
+    }
+
+    h1{
+        font-family: system-ui;
+        font-size: 45px;
+        line-height: 43px;
+    }
+
+    p.onHover{
+        font-size: 25px;
+        color: gray;
+        font-family: cursive;
+    }
+
+    .onHover:hover{
+        color: black;
+        font-family: fantasy    ;
+    }
+
+
+    #search{
+
+        margin-top: 50px;
+        margin-left: 30px;
+        width: 202px;
+        height: 25px;
+        border: 1px solid gray;
+        display: flex;
+        border-radius: 20px;
+        margin-bottom: 30px;
+    }
+
+
+    #bordericon:focus{
+        outline: none;
+    }
+
+  
+
+    #searchIcon{
+    margin-left: 10px;
+    margin-top: 5px;
+    }
+
+    hr{
+        color: black;
+        margin-bottom: 20px;
+    }
+
+    a{
+        font-family: sans-serif;
+        font-size: 30px;
+        line-height: 43px;
+        margin-left: 40px;
+    }
+
+    .container > div a:focus{
+        outline: none;
+    }
+
+    .kfcbuket,.kfctrending,.kfcburger,.kfcrice,.kfcsnack,.kfcbevarage{
+        display: grid;
+        height: 1800px;
+        margin-top:20px;
+        grid-template-columns: repeat(2,480px);
+        grid-template-rows: repeat(5,550px);
+        grid-gap: 20px;
+    }
+
+    .buketimage,.Trendingimage,.burgerimage,.riceimage,.snackimage,.bevarageimage{
+        margin-top: 20px;
+        margin-left: 30px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        border-radius: 20px;
+    }
+
+    .imagecontent{
+        width: 100%;
+        height: 300px;
+    }
+
+    .textcontent{
+        width: 100%;
+        height: 200px;
+    }
+
+    .photo{
+        width: 100%;
+        height: 100%;
+        border-start-end-radius: 20px;
+        border-start-start-radius: 20px;
+    }
+
+    .textcontent :nth-child(1){
+        font-size: 30px;
+    }
+
+    span{
+        margin-top: 20px;
+    }
+
+    button{
+        width: 200px;
+        font-size: 20px;
+        background-color: red;
+        color: white;
+        border-radius: 40px;
+        padding: 10px;
+        border: none;
+        margin-top:20px;
+        margin-left: 120px;        
+    }
+
+    .endpage{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        background-color: #202124;
+
+    }
+
+    .endpagecontent{
+        width: 200px;
+        height:170px;
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+
+    .endpagecontent p{ 
+        color: white;
+        font-size: 13px;
+        font-family: monospace;
+    }
+
+    .link{
+        color: white;
+        font-size: 13px;
+        margin-left: 0px;
+    }
+
+    * {
+    font-family: sans;
+  }
+  
+  #kfcheader {
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    height: 80px;
+  }
+  .left {
+    width: 25%;
+    height: 60%;
+    display: flex;
+    margin: 5px 0% 0% 5%;
+    justify-content: space-evenly;
+  }
+  
+  .left > a > #kfc {
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+    margin-right: 50px;
+}
+  
+  .left > h6 > a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .right {
+    width: 29%;
+    height: 100%;
+    display: flex;
+  }
+  
+  #lastimage {
+    margin: 7% 0% 0% 14px;
+    width: 17%;
+    height: 30px;
+  }
+  
+  .right > h6 {
+    font-size: 10px;
+    margin: 6% 0% 20% -2%;
+    padding-top: 2%;
+    width: 55px;
+    height: 15px;
+  }
+  .right > h5 {
+    width: 35px;
+    text-align: end;
+    margin-left: 5px;
+    font-size: 11px;
+    margin-top: 8%;
+  }
+  
+  .right > h5::before {
+    margin-left: 10px;
+    content: "₹";
+    font-weight: 400;
+    font-size: 20px;
+  }
+  
+  #cover {
+    background-image: url("https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg");
+    background-repeat: no-repeat;
+    margin: 6% 0% 6% 4%;
+    width: 19%;
+    height: 50%;
+  }
+  
+
+    
+
+</style>
+<body>
+
+    <div id="kfcheader">
+        <div class = "left">
+            <a href="index.html"> <img id = "kfc" src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt=""></a>
+            <H6> <a href="kfcmenu.html">Menu</a></H6>
+            <H6><a href="deals.html">Deals</a></H6>
+        </div>
+        <div class = "right">
+            <img  id="lastimage" src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg" alt="">
+            <h6 style="font-size: 20px">  Account</h6>
+            <h5></h5>
+            <div id = "cover"></div>
+        </div>
+    </div>
+   
+
+    <div class="container">
+        <div class="option">
+            <div>
+                <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg"/>
+            </div>
+            <h1>KFC MENU</h1>    
+            <p class="onHover "  onclick="myFunction()"> Bucket Meal</p>
+            <p class="onHover "  onclick="mytrending()"> Trending</p>
+            <p class="onHover "  onclick="myburger()"> Burger</p>
+            <p class="onHover "  onclick="myrice()">Rice Bowls</p>
+            <p class="onHover "  onclick="mysnack()"> Snack</p>
+            <p class="onHover "  onclick="mybevarge()">Beverages</p>
+        </div>
+
+        <div class="menu">
+            <div id="search">
+                <div>
+                    <img id="searchIcon" src="https://online.kfc.co.in/static/media/searchIcon.0e00b33c.svg" alt="alert" ;/>
+                </div>
+
+                <div>
+                 <input   id="bordericon" onsearch="searchitem(this)" type="search"  placeholder="Search our menu"    style="border: none; margin-top: 5px; " />
+                </div>
+                <p id="demo"></p>
+
+            </div>
+           <hr>
+
+           <div class="subMenu">
+               
+           </div>
+        </div>
+    </div>
+
+    <div class="endpage">
+        <div class="endpagecontent">
+            <img style="padding: 60px;" src="//images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg" alt="KFC LOGO" class="kfc-footer-logo">
+        </div>
+        <div class="endpagecontent">
+            <p>KFC FOOD</p>
+            <p>MENU</p>
+            <p>ORDER</p>
+            <p>GIFT CARD</p>
+        </div>
+
+        <div class="endpagecontent">
+            <p>SUPPORT</p>
+            <p>GET HELP</p>
+            <p>CONTACT US</p>
+            <p>KFC FEEDBACK</p>
+        </div>
+        <div class="endpagecontent">
+            <p>LEAGAL</p>
+            <p>TERMS AND CONDITION</p>
+            <p>PRIVACY POLICY</p>
+            <p>Disclaimer</p>
+        </div>
+
+        
+        <div class="endpagecontent">
+            <p>KFC INDIA</p>
+            <p>ABOUT KFC</p>
+            <p>KFC CARE</p>
+            <p>CAREERS</p>
+            <P>OUR GOLDEN POST</P>
+        </div>
+
+
+        <div class="endpagecontent">
+            <img src="//images.ctfassets.net/wtodlh47qxpt/6qgKpWUOIsrIiazhk3cdmF/d60b4c20be69bab1f939bf33348b67e9/Find_KFC.svg" alt="">
+            <a class="link" target="_blank" tabindex="0" href="https://restaurants.kfc.co.in/">Find a KFC</a>
+        </div>
+
+        <div class="endpagecontent">
+            <a class="link" target="_blank" href="https://play.google.com/store/apps/details?id=com.yum.kfc">
+            <img src="//images.ctfassets.net/wtodlh47qxpt/6BdZsyjLn64c06uCIE73d1/fb530f5d5231533b049463f6c7e8a2b1/google_play.svg" alt="Google Play"></a>
+        </div>
+
+        <div class="endpagecontent">
+            <a class="link" target="_blank" href="https://apps.apple.com/in/app/kfc-india/id915824379">
+            <img src="//images.ctfassets.net/wtodlh47qxpt/em3mcMuAdXWlgucSJiTbS/d3ae7e51ed101d829e459355e255c47f/apple.svg" alt="Apple Store"></a>
+        </div>
+
+    </div>
+
+   
+</body>
+</html>
+
+<script>
+
+var arr=JSON.parse(localStorage.getItem("Item")) || [];
+
+
+
+    let obj =  [
+        {title:"BUCKET MEAL" , target:"buketkfcmeal" , data:[
+            {title: "Stay Home Bucket",
+            price: 179,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-32244-0.jpg?ver=4.94" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Family Feast",
+            price: 101,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-32256-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "10pc Chipotle Fried Chicken ",
+            price: 129,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-33109-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "5pc Chipotle Fried Chicke",
+            price: 167,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-33108-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "5pc Chipotle Fried Chicken",
+            price: 299,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-33107-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "10 pc Chipotle Fried Chicken Strips",
+            price: 199,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-33110-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+
+            
+    ]},
+        {title:"TRENDING" , target:"Trendingkfcmeal" , data:[
+            {title: "Stay Home Bucket",
+            price: 299,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-33116-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Super Snacker Combo",
+            price: 210,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-33065-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Chick’n Wings Combo ",
+            price: 310,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-33066-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Chick'n Rice Solo Combo",
+            price: 210,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-33117-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Chick'n Strips Solo Combo",
+            price: 410,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-33118-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Chick'n Fries Solo Combo",
+            price: 510,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-33068-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+    ]},
+
+        {title:"BURGER" , target:"burgerkfcmeal" , data:[
+            {title: "2 Chicken Krisper Burgers",
+            price: 110,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-32578-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "2 Veg Krisper Burgers",
+            price: 299,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-32576-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: " Chicken & Krispers Combo",
+            price: 310,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-32573-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Veg-Non-Veg Krispers Combo",
+            price: 400,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-32573-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Tandoori Zinger Burger",
+            price: 110,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-32230-41486.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Tandoori Zinger Box",
+            price: 102,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-32230-41486.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+    ]},
+
+        {title:"RICE BOWLS" , target:"ricekfcmeal" , data:[
+            {title: "Popcorn Rice Bowl",
+            price: 199,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-30665-40507.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Rice Duo Meal",
+            price: 120,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-31950-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Smoky Red Rice Bowl",
+            price: 410,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-30665-40507.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Veg Rice Bowl",
+            price: 310,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-31950-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: " Smoky Red Rice Bowl",
+            price: 187,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-31899-41328.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Smoky Red Rice Bowl",
+            price: 179,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-31899-41328.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+    ]},
+
+        {title:"SNACK"  , target:"snackkfcmeal" , data:[
+        {title: "Choco Mud Pie",   
+            price: 710,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-32841-42014.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Coffee Mousse Cake",
+            price: 160,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-32842-42015.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Chicken & Fries Bucket ",
+            price: 130,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-31984-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: " Mingles Bucket",
+            price: 1120,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-33122-0.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "4pc Hot & Crispy Chicken",
+            price: 110,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-30675-40512.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Large Popcorn",
+            price: 210,
+            category:"Non-veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-30678-40515.jpg?ver=5.59" ,
+            subImg : "https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+    ]},
+
+        {title:"BEVERAGES"  , target:"bevaragekfcmeal" , data:[
+            {title: "Pepsi PET",
+            price: 210,
+            category:"Veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-30683-40520.jpg?ver=5.59" ,
+            subImg : "	https://online.kfc.co.in/static/media/Veg_dot_Icon.2636651d.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Pepsi Can 330 ml",
+            price: 410,
+            category:"Veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-31373-41015.jpg?ver=5.59" ,
+            subImg : "	https://online.kfc.co.in/static/media/Veg_dot_Icon.2636651d.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "7UP Can 330 ml",
+            price: 510,
+            category:"Veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-31374-41016.jpg?ver=5.59" ,
+            subImg : "	https://online.kfc.co.in/static/media/Veg_dot_Icon.2636651d.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Pepsi Black Can 330 ml",
+            price: 310,
+            category:"Veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-30684-40521.jpg?ver=5.59" ,
+            subImg : "	https://online.kfc.co.in/static/media/Veg_dot_Icon.2636651d.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Mirinda Can 330 ml",
+            price: 210,
+            category:"Veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-31376-41018.jpg?ver=5.59" ,
+            subImg : "	https://online.kfc.co.in/static/media/Veg_dot_Icon.2636651d.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+            
+            {title: "Red Bull Energy Drink",
+            price: 110,
+            category:"Veg",
+            img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/A-31375-41017.jpg?ver=5.59" ,
+            subImg : "	https://online.kfc.co.in/static/media/Veg_dot_Icon.2636651d.svg",
+            instruct:"Save 21% & enjoy 4pc Hot & Crispy Chicken, 4 Hot Wings, 6 chicken strips & 2 delicious dips [serves 3]"},
+        ]}
+    
+]
+
+
+
+
+
+    function setHtml(text){
+        var htmlstring = "";
+        var data = {};
+        if (text) {
+            for (let index = 0; index<obj.length; index++) {
+                htmlstring = htmlstring+`<a tabindex="0" id="${obj[index]['target']}" style="border: none;">${obj[index]['title']}</a>`;
+
+                htmlstring = htmlstring+`<div class="kfcbuket">`;
+
+                for (let i = 0; i < obj[index]['data'].length; i++) {
+                    if (obj[index]['data'][i]['title'].toLowerCase().includes(text.toLowerCase())) {
+                        htmlstring= htmlstring+`<div class="buketimage">
+                            <div class="imagecontent">
+                                <img class="photo" src="${obj[index]['data'][i]['img']}">
+                            </div>
+                            <div class="textcontent">
+                                <p1>${obj[index]['data'][i]['title']}</p1>
+                                <p style="margin: 0px; margin-top: 8px;">
+                                <img alt="photo" src="${obj[index]['data'][i]['subImg']}"> ${obj[index]['data'][i]['category']} 
+                                </p>
+                                <p style="font-size: 24px; margin: 0px; margin-top: 8px;" onclick="addprice(this)" val="49.00">  ₹ ${obj[index]['data'][i]['price']}</p>
+                                <p style="color: gray  ; margin: 0px; margin-top: 10px;">${obj[index]['data'][i]['instruct']}</p>
+                                <button onclick="addcard(this)" val="${index}_${i}"> Add to cart
+                                <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" alt="photo" class="add-to-cart-Icon">
+                                </button>
+                            </div>
+                        </div>`;
+                    }
+                }
+
+                htmlstring = htmlstring+`</div>`;
+            }
+
+            var subMenu = document.getElementsByClassName('subMenu')[0];
+            subMenu.innerHTML = htmlstring;
+        }else{
+            for (let index = 0; index<obj.length; index++) {
+                htmlstring = htmlstring+`<a tabindex="0" id="${obj[index]['target']}" style="border: none;">${obj[index]['title']}</a>`;
+
+                htmlstring = htmlstring+`<div class="kfcbuket">`;
+
+                for (let i = 0; i < obj[index]['data'].length; i++) {
+                    htmlstring= htmlstring+`<div class="buketimage">
+                        <div class="imagecontent">
+                            <img class="photo" src="${obj[index]['data'][i]['img']}">
+                        </div>
+                        <div class="textcontent">
+                            <p1>${obj[index]['data'][i]['title']}</p1>
+                            <p style="margin: 0px; margin-top: 8px;">
+                            <img alt="photo" src="${obj[index]['data'][i]['subImg']}"> ${obj[index]['data'][i]['category']} 
+                            </p>
+                            <p style="font-size: 24px; margin: 0px; margin-top: 8px;" onclick="addprice(this)" val="49.00">  ₹ ${obj[index]['data'][i]['price']}</p>
+                            <p style="color: gray  ; margin: 0px; margin-top: 10px;">${obj[index]['data'][i]['instruct']}</p>
+                            <button onclick="addcard(this)" val="${index}_${i}"> Add to cart
+                            <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" alt="photo" class="add-to-cart-Icon">
+                            </button>
+                        </div>
+                    </div>`;
+                    
+                }
+
+                htmlstring = htmlstring+`</div>`;
+            }
+
+            var subMenu = document.getElementsByClassName('subMenu')[0];
+            subMenu.innerHTML = htmlstring;
+        }
+        
+        
+    }
+    
+
+    window.onload = function(){
+        setHtml();
+    }
+    
+    
+    function myFunction() {
+      document.getElementById("buketkfcmeal").focus();
+    }
+
+    function mytrending() {
+      document.getElementById("Trendingkfcmeal").focus();
+    }
+
+    function myburger() {
+       document.getElementById("burgerkfcmeal").focus();
+     }
+
+     function myrice() {
+       document.getElementById("ricekfcmeal").focus();
+     }
+
+     function mysnack() {
+       document.getElementById("snackkfcmeal").focus();
+     }
+
+     function mybevarge() {
+       document.getElementById("bevaragekfcmeal").focus();
+    }
+
+
+     
+    function  addcard(event){
+        console.log(event.getAttribute("val"));
+        var ides =  event.getAttribute("val");
+        var catid = ides.split("_")[0];
+        var proid = ides.split("_")[1];
+
+
+        for (let index = 0; index<obj.length; index++) {
+
+            if (index==catid) {
+                for (let i = 0; i < obj[index]['data'].length; i++) {
+                    if(i==proid){
+                        localStorage.setItem("product",JSON.stringify( obj[index]['data'][i]))
+                        break;
+                    }
+                }
+            }
+        }
+        window.location.href = "cart.html"
+        // localStorage.setItem("Item" ,JSON.stringify(arr));
+
+    } 
+
+
+
+
+
+    function searchitem(e){
+        let text = e.value;
+        setHtml(text)
+    }
+       
+    </script>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="all.css">
+    <title>Otp</title>
+</head>
+
+<body>
+
+    <body>
+        <div class="ContOtp">
+            <div class="loginForm" id="otpPage">
+                <div class="sign_in_header">Sign In / Sign up</div>
+                <div class="kfcImg"> <img
+                        src="https://login.kfc.co.in/auth/resources/1vkce/login/kfcIndiaLoginUIDev_2021_10_27_16_49/images/KFC_logo.svg"
+                        alt="kfclogo"></div>
+                <div class="title">We Just Texted You</div>
+                <div class="subTitle otpSubtitle">Please enter the verification code we just sent to <b></b>
+                </div>
+                <form>
+                    <!-- <input type="hidden" name="otp" id="otp"> -->
+                    <div class="joinNow resendCode">
+                        <!-- <input class="different-number" name="diff-number" id="kc-login2" type="submit"
+                            value="Different Number"  > -->
+
+                        <div class="different-number"><u><b><a href="signup.html">Different Number?</a>
+                        </div>
+
+
+                    </div>
+                    <div class="otpDiv">
+                        <input id="codeBox0" class="otpNum" type="tel" maxlength="1" required="">
+                        <input id="codeBox1" class="otpNum" type="tel" maxlength="1" required="">
+                        <input id="codeBox2" class="otpNum" type="tel" maxlength="1" required="">
+                        <input id="codeBox3" class="otpNum" type="tel" maxlength="1" required="">
+                    </div>
+                    <div class="joinNow resendCode">
+                        
+                        <input class="resendCode" name="resend-OTP"  type="submit"
+                            value="Resend the Code">
+                    </div>
+                    <div class="submitBtnDiv">
+
+                        <button type="submit" name="confirm-OTP" class="btnSubmit otpButton"
+                            id="submitBtn">Submit</button>
+
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+
+
+
+    </body>
+    <script>
+        document.querySelector("form").addEventListener("submit", otp);
+        var pass = JSON.parse(localStorage.getItem("passList")) || [];
+        function otp(event) {
+            event.preventDefault();
+
+            var otp = document.getElementById("codeBox0").value;
+            var otp1 = document.getElementById("codeBox1").value;
+            var otp2 = document.getElementById("codeBox2").value;
+            var otp3 = document.getElementById("codeBox3").value;
+
+
+            var list = {
+                pass: otp,otp1,otp2,otp3
+            };
+            pass.push(list);
+            localStorage.setItem("passList", JSON.stringify(pass));
+            // displayItems(mealList);
+
+        }
+
+
+
+ 
+
+
+
+
+
+        document.querySelector("form").addEventListener("submit", function () {
+            window.location.href = "email.html"
+        
+        })
+
+    </script>
+
+</html>

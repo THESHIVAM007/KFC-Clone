@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="order_confirm.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="kfcheader">
+        <button onclick= "homepage()">Go to HomePage</button>
+        <img id = "kfc" src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt="">
+    </div>
+    <div class = "body">
+        <div class = "confirmation">
+            <h1>Success</h1>
+            <div class = "line">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <h1>ORDER RECEIVED</h1>
+        </div>
+        <div class = "details">
+            <h5 id = "order"> ORDER# N6564D109000023826</h5>
+            <h5 id = "address">DELIVERY ADDRESS</h5>
+            <div id = "input"></div>
+            <div id = "item"> ITEM</div>
+            <div id = "bill">
+                <div>Subtotal</div>
+                <div class = "price"></div>
+                <div>GST</div>
+                <div class = "gst"></div>
+                <div>Delivery Fees</div>
+                <div class = "handling"></div>
+                <div>TOTAL</div>
+                <div class = "total"></div>
+                <div>PAYMENT</div>
+                <div id = "mode"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="order_confirm.js"></script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="payment.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "paymentBox">
+        <h3>Select Your Payment</h3>
+        <div id = "selection">
+            <span>
+                <div id = "option">
+                    <button id = "cred" onclick="card()"></button>
+                    <h5>Credit / Debit Card</h5>
+                </div>
+                <div class = "inputs">
+                    <input type="text" placeholder="Name on Card*" id = "name">
+                    <input type="number" placeholder="Card Number*" id = "cardnum">
+                    <div>
+                        <input type="month" placeholder="MM/YY*" id = "expiry">
+                        <input type="text" placeholder="CVV*" id = "cvv">
+                    </div>   
+                </div>
+            </span>
+            <span>
+                <div id = "option">
+                    <button id = "cash" onclick="cash()"></button>
+                    <h5>Cash</h5>
+                </div>
+            </span>
+        </div>
+    </div>
+
+    <button id = "submit" onclick="checkOut()">Submit</button>
+</body>
+</html>
+<script  src="payment.js">
+</script>

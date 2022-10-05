@@ -1,0 +1,497 @@
+#kfcheader {
+  display: flex;
+  width: 98%;
+  height: 60px;
+  border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+#kfcheader > button {
+  width: 125px;
+  height: 35px;
+  border-radius: 30px;
+  border: 1px solid black;
+  font-size: 11px;
+  font-weight: 800;
+  color: rgb(58, 57, 57);
+  background-color: white;
+  margin-top: 1%;
+  margin-left: 6%;
+}
+
+#kfcheader > button:hover {
+  background-color: black;
+  color: white;
+}
+
+#kfcheader > a {
+  width: 6%;
+  margin: 1% 0% 0% 29%;
+}
+
+#kfcheader > #account {
+  margin: 2% 0% 0% 32%;
+  width: 4%;
+  height: 30%;
+}
+
+#kfcheader > h6 {
+  font-family: sans-serif;
+  margin-top: 23px;
+  font-size: 13px;
+}
+
+#kfcheader ~ img {
+  width: 40px;
+  height: 25px;
+  margin-left: 13%;
+}
+.head {
+  width: 45%;
+  height: 50px;
+  display: flex;
+  margin: 1% 0% 0% 13%;
+  color: rgb(46, 46, 46);
+}
+.head > h1 {
+  margin-top: 1%;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+}
+
+.head > img {
+  margin-left: 33%;
+  width: 9px;
+}
+
+.head > h5 {
+  margin-top: 4%;
+  margin-left: 2%;
+}
+
+#infobox {
+  display: grid;
+  grid-template-rows: 150px 200px 80px;
+  grid-template-columns: 180px 250px;
+  margin-left: 13%;
+}
+
+#checkout {
+  width: 82%;
+  margin-left: 2%;
+  display: flex;
+}
+
+#infobox > div {
+  background-color: #f8f7f5;
+  border-bottom: 8px solid white;
+}
+
+#infobox > div:nth-child(2n + 1) {
+  font-family: "Roboto", sans-serif;
+  font-size: 21px;
+  padding-left: 30px;
+  word-spacing: 50px;
+  line-height: 25px;
+  padding-top: 20px;
+}
+.address {
+  color: #272626;
+  font-size: 10px;
+  padding-top: 40px;
+  padding-left: 3px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.address > input {
+  background-color: #f8f7f5;
+  border: 0;
+  border-bottom: 2px solid rgb(228, 228, 228);
+  font-size: 11px;
+  width: 95%;
+  height: 25px;
+  font-family: "Open Sans", sans-serif;
+  outline: none; /*to hide the input box */
+}
+
+#contact {
+  display: grid;
+  grid-template-rows: repeat(3, 30%);
+  padding-left: 3px;
+}
+
+#contact > div > div:first-child {
+  color: rgb(65, 65, 65);
+  font-size: 10px;
+  padding-top: 20px;
+}
+#contact > div > div:nth-child(2) {
+  background-color: #f8f7f5;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  font-size: 10px;
+  width: 95%;
+  height: 20px;
+  padding-top: 4px;
+  font-family: "Open Sans", sans-serif;
+}
+
+#anchor {
+  text-align: end;
+  padding-top: 15%;
+  padding-right: 5%;
+  font-size: 13px;
+}
+
+a {
+  color: black;
+}
+
+#pricebox {
+  border-radius: 10px;
+  width: 280px;
+  height: 250px;
+  border-top: 1px solid rgb(194, 191, 191);
+  margin-left: 4%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#pricebox > h3 {
+  font-family: "Roboto", sans-serif;
+  padding-left: 4%;
+  font-size: 16px;
+  height: 20px;
+}
+
+#pricebox > h3 + div {
+  border-bottom: 1px solid rgb(165, 163, 163);
+  height: 20px;
+  padding: 5% 6%;
+  margin-top: -3%;
+  background: rgb(240, 151, 173);
+}
+
+#pricebox > div > button {
+  border-radius: 10px;
+}
+#pricebox > div > button:hover {
+  background: rgb(241, 86, 14);
+  color: white;
+}
+
+#bill {
+  display: grid;
+  margin-top: 6%;
+  grid-template-columns: 73% 23%;
+  grid-template-rows: repeat(3, 25px);
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  color: rgb(0, 0, 0);
+  padding-left: 4%;
+}
+
+#bill > div:nth-child(2n) {
+  text-align: end;
+}
+
+hr {
+  border: none;
+  outline: none;
+  height: 1px;
+  border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+#continue {
+  margin-left: 7%;
+  width: 85%;
+  border-radius: 15px;
+  height: 35px;
+  background-color: rgb(240, 36, 97);
+  border: currentColor;
+  color: rgb(255, 255, 255);
+}
+
+#continue > span {
+  margin-left: 3%;
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  #kfcheader {
+    display: flex;
+    width: 98%;
+    height: 40px;
+  }
+
+  #kfcheader > button {
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    margin-top: 0%;
+    margin-left: 0%;
+  }
+
+  #kfcheader > a {
+    width: 10%;
+    margin: 1% 0% 0% 30%;
+  }
+
+  #kfcheader > #account {
+    margin: 1% 0% 0% 32%;
+    height: 55%;
+  }
+
+  #kfcheader > h6 {
+    margin-top: 13px;
+    font-size: 13px;
+  }
+
+  #kfcheader ~ img {
+    width: 30px;
+    height: 20px;
+    margin-left: 4%;
+  }
+
+  .head {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin: 1% 0% 0% 1%;
+    color: rgb(46, 46, 46);
+  }
+  .head > img {
+    margin-left: 50%;
+    margin-right: 0%;
+    width: 15px;
+  }
+
+  .head > h5 {
+    font-size: 18px;
+    margin: 15px 2% 0% 1%;
+  }
+
+  #infobox {
+    display: grid;
+    grid-template-rows: 150px 200px 80px;
+    grid-template-columns: 30% 65%;
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  #checkout {
+    width: 98%;
+    margin-left: 0%;
+    display: block;
+  }
+
+  .address {
+    color: #272626;
+    font-size: 15px;
+  }
+
+  .address > input {
+    font-size: 16px;
+  }
+
+  #contact > div > div:first-child {
+    font-size: 15px;
+  }
+
+  #contact > div > div:nth-child(2) {
+    font-size: 15px;
+  }
+
+  #anchor {
+    padding-right: 10%;
+    font-size: 16px;
+  }
+
+  #pricebox {
+    border-radius: 10px;
+    width: 95%;
+    height: 330px;
+    margin-left: 1%;
+    margin-top: 2%;
+  }
+
+  #pricebox > h3 {
+    font-size: 20px;
+  }
+
+  #pricebox > h3 + div {
+    height: 26px;
+    padding: 2% 6%;
+    margin-top: -1%;
+  }
+
+  #pricebox > div > input {
+    width: 80%;
+    height: 25px;
+  }
+
+  #pricebox > div > button {
+    width: 15%;
+    height: 30px;
+  }
+
+  #bill {
+    display: grid;
+    grid-template-columns: 73% 23%;
+    grid-template-rows: repeat(3, 35px);
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    padding-left: 4%;
+  }
+
+  #continue {
+    margin-left: 7%;
+    width: 85%;
+    height: 40px;
+    font-size: 23px;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 375px) {
+  #kfcheader {
+    display: flex;
+    width: 98%;
+    height: 40px;
+  }
+
+  #kfcheader > button {
+    width: 70px;
+    height: 30px;
+    font-size: 12px;
+    border: 1px solid red;
+    margin-top: 0%;
+    margin-left: 0%;
+  }
+
+  #kfcheader > a {
+    width: 16%;
+    margin: 1% 0% 0% 21%;
+  }
+
+  #kfcheader > #account {
+    margin: 3% 0% 0% 15%;
+    height: 50%;
+    width: 20%;
+  }
+
+  #kfcheader > h6 {
+    margin-top: 15px;
+    font-size: 15px;
+  }
+
+  #kfcheader ~ img {
+    width: 30px;
+    height: 20px;
+    margin-left: 4%;
+  }
+
+  .head {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin: 1% 0% 0% 0%;
+    color: rgb(46, 46, 46);
+  }
+  .head > h1 {
+    margin-top: 4%;
+    font-size: 20px;
+  }
+  .head > img {
+    margin-left: 33%;
+    margin-right: 1%;
+    width: 12px;
+  }
+
+  .head > h5 {
+    font-size: 14px;
+    margin: 17px 0% 0% 0%;
+  }
+
+  #infobox {
+    display: grid;
+    grid-template-rows: 70px 150px 70px 250px 60px 50px;
+    grid-template-columns: 100%;
+    margin-left: 0%;
+  }
+
+  #infobox > div {
+    border-bottom: 8px solid white;
+  }
+
+  #checkout {
+    width: 100%;
+    margin-left: 0%;
+    display: block;
+  }
+
+  #infobox > div:nth-child(2n + 1) {
+    font-size: 21px;
+    padding-left: 20px;
+    word-spacing: 0px;
+    border-bottom: 0;
+  }
+
+  .address {
+    font-size: 15px;
+    padding-left: 20px;
+  }
+
+  .address > input {
+    font-size: 15px;
+  }
+
+  #contact {
+    display: grid;
+    grid-template-rows: repeat(3, 30%);
+    padding-left: 3px;
+  }
+
+  #contact > div > div :first-child {
+    color: rgb(65, 65, 65);
+    font-size: 15px;
+    padding-top: 20px;
+  }
+
+  #contact > div > div:nth-child(2) {
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-size: 15px;
+    width: 95%;
+    height: 25px;
+  }
+
+  #anchor {
+    text-align: end;
+    padding-top: 0%;
+    padding-right: 8%;
+    font-size: 20px;
+  }
+
+  #pricebox {
+    border-radius: 10px;
+    width: 95%;
+    height: 250px;
+    border-top: 1px solid rgb(194, 191, 191);
+    margin-left: 10%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+
+  #pricebox > h3 + div {
+    height: 26px;
+    padding: 2% 6%;
+    margin-top: -1%;
+  }
+
+  #pricebox > div > input {
+    width: 80%;
+    height: 22px;
+  }
+
+  #pricebox > div > button {
+    width: 15%;
+    height: 25px;
+  }
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		
+		.nav{
+			height: 100px;
+			width: 100%;
+			display: flex;
+			margin: auto;
+		}
+		.startorder{
+			background-color: black;
+			height: 90px;
+			width: 100%;
+			display: flex;
+		
+
+
+		}
+		.hh1{
+			color: white;
+			size: 6;
+			margin-left: 15%;
+			margin-top: 10px;
+
+		}
+.offer{
+	height: 400px;
+	width: 100%;
+
+}
+.welcome{
+	height: 100px;
+	background-color: lightgray;
+	width: 100%;
+}
+.wel{
+	size: 8;
+	color: black;
+	margin-left: 45px;
+	margin-top: 15px;
+
+}
+
+.container{
+            
+            height: 700px;
+            width: 88%;
+            margin-left: 10%;
+            margin-right: 2%;
+        
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            row-gap: 25px;
+            column-gap: 25px;
+        }
+        .item{
+            
+            width: 80%;
+
+        }
+		.button{
+			
+			border: none;
+			color: black;
+			padding: 10px 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-style: bold;
+			font-size: 18px;
+			margin: 4px 2px;
+			cursor: pointer;
+			background-color: white;
+		  }
+		  .startnow{
+			width:120px;
+			height: 50px;
+			 border-radius: 25px;
+			 color: white;
+			 background-color: red;
+			text-align: center;
+			text-decoration: none;
+			
+			font-style: bold;
+			font-size: 12px;
+			margin: 4px 2px;
+			cursor: pointer;
+
+		  }
+		  .offers{
+		margin-left: 10%;
+			  height: 75px;
+			  width: 80%;
+			  display: flex;
+			  justify-content: space-between;
+		  }
+		  .off{
+			  background-color: black;
+height: 500px;
+width: 150%;
+display: flex;
+		  }
+        .secondlast{
+			border: 1px solid red;
+			height: 450px;
+			width: 20%;
+		}
+		.endpage{
+        width: 100%;
+        height: 300px;
+        border: 1px solid red;
+        display: flex;
+        background-color: #202124;
+
+    }
+
+    .endpagecontent{
+        width: 200px;
+        height:170px;
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+
+    .endpagecontent p{ 
+        color: white;
+        font-size: 13px;
+        font-family: monospace;
+    }
+
+    .link{
+        color: white;
+        font-size: 13px;
+        margin-left: 0px;
+    }
+
+	.signup{
+		width:120px;
+			height: 50px;
+			 border-radius: 25px;
+			 color: black;
+			 background-color: white;
+			text-align: center;
+			text-decoration: none;
+			font-style: bold;
+			font-size: 12px;
+			cursor: pointer;
+			margin-left: 70%;
+			font-size:22px;
+			border:none
+	}
+		
+
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<img height="50" src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt="">
+	
+		<button class="button" type="button" onclick="menu()">MENU</button>
+		<button class="button" type="button" onclick="deals()">DEALS</button>
+		<button class="signup" type="button" onclick="signup()">Sign up</button>
+
+	</div>
+	<div class="startorder">
+		<h1 class="hh1">LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN</h1>
+		<button class="startnow"> Start now</button>
+	</div>
+	<div class="offer">
+		<img height="400px" width="100%" src="https://images.ctfassets.net/wtodlh47qxpt/58S3eeKoMV6huFW8mZv65U/fe1fbcea803cd27cf0d66de787c4f7a1/December_Fest_1440x396px.jpg" alt="">
+	</div>
+	<div class="welcome">
+		<h1 class="wel">WELCOME TO KFC!</h1>
+	</div>
+	<div>
+		<h1>Browse Categories</h1>
+		<hr>
+	</div>
+	<div class="container">
+        <div class="item"><img height="250px" width="100%" src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT3282.jpg?ver=5.64" alt=""> 
+        <h1 >December first</h1>
+    </div>
+    <div class="item"><img height="250px" width="100%" src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT3131.jpg?ver=5.64" alt=""> 
+        <h1 >Bucket meal</h1>
+    </div>
+    <div class="item"><img height="250px" width="100%" src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT3311.jpg?ver=5.64" alt=""> 
+        <h1 >Trending</h1>
+    </div>
+    <div class="item"><img height="250px" width="100%" src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT3132.jpg?ver=5.64" alt=""> 
+        <h1 >Burgers</h1>
+    </div>
+    <div class="item"><img height="250px" width="100%" src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT3133.jpg?ver=5.64" alt=""> 
+        <h1 >Rice Bowlz</h1>
+    </div>
+    <div class="item"><img height="250px" width="100%" src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT3134.jpg?ver=5.64" alt=""> 
+        <h1 >Snacks</h1>
+    </div>
+    <div class="item"><img height="250px" width="100%" src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT3135.jpg?ver=5.64" alt=""> 
+        <h1 >Beverage</h1>
+    </div>
+    <div class="item"><img height="250px" width="100%" src="https://online.kfc.co.in/static/media/finger_lickin.fc21c805.svg" alt=""> 
+        <h1 >view all menu</h1>
+    </div>
+    
+ 
+ </div>
+        
+        
+    </div>
+
+</div>
+<div class="endpage">
+	<div class="endpagecontent">
+		<img style="padding: 60px;" src="//images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg" alt="KFC LOGO" class="kfc-footer-logo">
+	</div>
+	<div class="endpagecontent">
+		<p>KFC FOOD</p>
+		<p>MENU</p>
+		<p>ORDER</p>
+		<p>GIFT CARD</p>
+	</div>
+
+	<div class="endpagecontent">
+		<p>SUPPORT</p>
+		<p>GET HELP</p>
+		<p>CONTACT US</p>
+		<p>KFC FEEDBACK</p>
+	</div>
+	<div class="endpagecontent">
+		<p>LEAGAL</p>
+		<p>TERMS AND CONDITION</p>
+		<p>PRIVACY POLICY</p>
+		<p>Disclaimer</p>
+	</div>
+
+	
+	<div class="endpagecontent">
+		<p>KFC INDIA</p>
+		<p>ABOUT KFC</p>
+		<p>KFC CARE</p>
+		<p>CAREERS</p>
+		<P>OUR GOLDEN POST</P>
+	</div>
+
+
+	<div class="endpagecontent">
+		<img src="//images.ctfassets.net/wtodlh47qxpt/6qgKpWUOIsrIiazhk3cdmF/d60b4c20be69bab1f939bf33348b67e9/Find_KFC.svg" alt="">
+		<a class="link" target="_blank" tabindex="0" href="https://restaurants.kfc.co.in/">Find a KFC</a>
+	</div>
+
+	<div class="endpagecontent">
+		<a class="link" target="_blank" href="https://play.google.com/store/apps/details?id=com.yum.kfc">
+		<img src="//images.ctfassets.net/wtodlh47qxpt/6BdZsyjLn64c06uCIE73d1/fb530f5d5231533b049463f6c7e8a2b1/google_play.svg" alt="Google Play"></a>
+	</div>
+
+	<div class="endpagecontent">
+		<a class="link" target="_blank" href="https://apps.apple.com/in/app/kfc-india/id915824379">
+		<img src="//images.ctfassets.net/wtodlh47qxpt/em3mcMuAdXWlgucSJiTbS/d3ae7e51ed101d829e459355e255c47f/apple.svg" alt="Apple Store"></a>
+	</div>
+
+</div>
+</body>
+</html>
+
+<script>
+function menu(){
+	window.location.href="kfc.html"
+}
+function deals(){
+	window.location.href="deals.html"
+}
+
+function signup(){
+	window.location.href="signup.html"
+}
+</script>

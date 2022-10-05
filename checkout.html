@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="checkout.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="kfcheader">
+        <button onclick="backtocart()">Back to Cart</button>
+        <a href="index.html"><img id = "kfc" src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt=""></a>
+        <img id = "account" src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg" alt="">
+        <h6>Account</h6>
+        </div>
+    </div>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAeCAYAAAB5c901AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABNSURBVHgB7c9BDQAgAMPAgQ4c4F8KDvABFuBHSe+9LGmZ6SsXWkY52b3yW/M5A+kMpDOQzkA6A+kMpDOQzkA6A+kMpDOQzkA6A+kMpNu9MQhKmC+cDgAAAABJRU5ErkJggg==" alt="">
+
+    <div class = "head">
+        <h1>CHECKOUT</h1>
+        <img src="https://online.kfc.co.in/static/media/Lock.e846db0a.svg" alt="">
+        <h5>Secure Checkout</h5>
+    </div>
+    <div id = "checkout">
+        <div id = "infobox">
+            <div>DELIVERY INFO</div>
+            <div class = "address">
+                <div>Address</div>
+                <input id = "inputAddress" type="text" placeholder="Aprtment, suite, unit, building, floor">
+            </div>
+
+            <div>CONTACT INFO</div>
+            <div id = "contact">
+                <div>
+                    <div>Full Name</div>
+                    <div id = "name"></div>
+                </div>
+                <div>
+                    <div>Phone Number</div>
+                    <div id = "phone"></div>
+                </div>
+                <div>
+                    <div>Email</div>
+                    <div id = "email"></div>
+                </div>
+            </div>
+            <div>PAYMENT</div>
+            <div id = "anchor">
+                <a href="payment.html"> <h5> Add Payment Method </h5> </a>
+            </div>
+        </div>
+
+        <div id = "pricebox">
+            <h3> ITEM</h3>
+            <div>
+                <input type="text" id = "coupon" placeholder="Apply coupon code here">
+                <button onclick="couponclick()">Enter</button>
+            </div>
+            <div id = "bill">
+                <div>Subtotal</div>
+                <div id = "price"></div>
+                <div>GST</div>
+                <div id = "gst"></div>
+                <div>Resturant Handling(Incl.taxes)</div>
+                <div id = "handling">₹35</div>
+            </div>
+            <hr class = "line">
+            <button id = "continue" onclick = "paid()">Continue to Payment <span></span></button>
+        </div>
+        
+    </div>
+</body>
+</html>
+<script src="checkout.js"></script>

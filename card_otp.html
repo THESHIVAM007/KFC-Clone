@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #otpbox{
+            margin:5% auto;
+            font-family: sans;
+            width: 240px;
+            height: 130px;
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+            text-align: center;
+            font-size: 10px;
+            font-weight: bold;
+            background-color:rgb(243, 243, 166);
+        }
+
+        #otpbox > div{
+            padding:10px;
+            line-height:13px;
+        }
+
+        input{
+            border: ridge;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "otpbox">
+        <div>Enter the OTP sent to your Registered Mobile Number</div> 
+        <input type="text" id = "otpNum">
+        <button onclick="otp()">Submit</button>
+    </div>
+    
+</body>
+</html>
+<script>
+
+    function otp()
+    {
+        if (otpNum.value == 1234)
+        {
+            window.location.href = "order_confirm.html"
+        }
+    }
+</script>

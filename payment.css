@@ -1,0 +1,167 @@
+#paymentBox {
+  width: 32%;
+  height: 350px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  background-color: #f8f7f5;
+  margin: auto;
+}
+
+#paymentBox > h3 {
+  height: 30px;
+  border-bottom: 1px solid rgb(219, 218, 218);
+  margin: 0%;
+  padding: 2% 2%;
+  background-color: white;
+}
+
+#selection {
+  display: grid;
+  grid-template-rows: 190px 60px;
+  width: 94%;
+  margin: 5% 0% 0% 3%;
+  grid-row-gap: 3px;
+}
+
+#selection > span {
+  border: 1px solid black;
+  background-color: white;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+span > #option {
+  height: 50px;
+  display: flex;
+  width: 100%;
+}
+
+#selection button {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 50%;
+  height: 14px;
+  margin: 3% 4%;
+}
+
+#selection h5 {
+  margin-top: 3%;
+}
+
+.inputs {
+  width: 100%;
+  height: 70%;
+}
+
+.inputs > input {
+  width: 94%;
+  height: 35px;
+  margin-left: 4%;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+.inputs > div > input {
+  height: 35px;
+  margin-left: 4%;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+#submit {
+  width: 180px;
+  height: 40px;
+  margin-top: 2%;
+  border-radius: 15px;
+  border: currentColor;
+  margin-left: 45%;
+  color: white;
+  background-color: rgb(119, 117, 117);
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  #paymentBox {
+    width: 40%;
+    height: 340px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+      rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    background-color: #f8f7f5;
+    margin: auto;
+  }
+
+  #selection {
+    display: grid;
+    grid-template-rows: 190px 60px;
+    width: 94%;
+    margin: 5% 0% 0% 3%;
+    grid-row-gap: 15px;
+  }
+
+  .inputs > div > input {
+    width: 43%;
+    height: 35px;
+    margin-left: 4%;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid black;
+  }
+
+  #submit {
+    width: 180px;
+    height: 40px;
+    margin-top: 2%;
+    border-radius: 15px;
+    border: currentColor;
+    margin-left: 38%;
+    color: white;
+    background-color: rgb(119, 117, 117);
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 375px) {
+  #paymentBox {
+    width: 60%;
+    height: 320px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+      rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    background-color: #f8f7f5;
+    margin: auto;
+  }
+
+  #selection {
+    display: grid;
+    grid-template-rows: 190px 60px;
+    width: 98%;
+    grid-row-gap: 15px;
+  }
+  .inputs > div > input {
+    width: 43%;
+    height: 35px;
+    margin-left: 4%;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid black;
+  }
+
+  .inputs > input {
+    width: 92%;
+    height: 35px;
+    margin-left: 4%;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid black;
+  }
+
+  #submit {
+    width: 180px;
+    height: 40px;
+    margin-top: 4%;
+    border-radius: 15px;
+    border: currentColor;
+    margin-left: 26%;
+    color: white;
+    background-color: rgb(119, 117, 117);
+  }
+}
